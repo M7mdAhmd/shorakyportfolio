@@ -11,17 +11,18 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Websitw Icon -->
-    <link rel="icon" type="image/png" href="media/website icon.png">
+    <link rel="icon" type="image/png" href="media/website icon black.png">
+
 </head>
 <body>
 
     <!-- Header and Navigation -->
     <header>
         <div class="container">
-            <div class="logo">
-                <a href="#home">Mohamed Elshoraky's Portfolio</a>
-            </div>
-            <nav id="navbar" class="navbar">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="#" id="portfolio-title" class="hidden">Mohamed Elshoraky's Portfolio</a>
+                </div>
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -36,22 +37,29 @@
                     <span></span>
                     <span></span>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <div class="overlay"></div>
-        <div class="home-content container">
-            <h1 class="home-title">Mohamed Elshoraky</h1>
-            <h2 class="home-subtitle">Machine Learning Engineer</h2>
-            <div class="home-buttons">
-                <a href="https://www.upwork.com/freelancers/~01ddf3b120ae1a05bc" class="btn primary-btn">Hire Me</a>
-                <a href="#contact" class="btn secondary-btn">Let's Talk</a>
-            </div>
+<!-- Home Section -->
+<section id="home" class="home-section">
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="media/Machine leaning & Ai video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="overlay"></div>
+    <div class="home-content container">
+        <h1 class="home-title">Mohamed Elshoraky</h1>
+        <h2 class="home-subtitle">Machine Learning Engineer</h2>
+        <div class="home-buttons">
+            <a href="https://www.upwork.com/freelancers/~01ddf3b120ae1a05bc" class="btn primary-btn">Hire Me</a>
+            <a href="#contact" class="btn secondary-btn">Let's Talk</a>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- About Section -->
     <section id="about" class="about-section section">
@@ -65,6 +73,7 @@
                     <p>
                         I am a Machine Learning Engineer with a solid background in Computer Engineering. I specialize in developing, optimizing, and deploying high-performance machine learning models. My expertise includes data mining, preprocessing, and feature engineering, which I use to turn raw data into actionable insights. I'm dedicated to advancing my knowledge in machine learning and AI to deliver impactful solutions.
                     </p>
+                    <br>
                     <p>
                         My approach emphasizes precision, scalability, and continuous improvement. I focus on thorough data preprocessing, careful feature selection, and rigorous model evaluation to ensure robust and accurate outcomes. I stay up-to-date with industry best practices and collaborate effectively to tackle complex challenges and push the boundaries of machine learning.
                     </p>

@@ -1,4 +1,3 @@
-// Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Elements
     const hamburger = document.getElementById('hamburger');
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll to Top Element
     const scrollTopBtn = document.getElementById('scroll-top');
 
-    // Section Elements for reveal effect
+    // Section Elements
     const sections = document.querySelectorAll('.section');
 
     // Toggle Mobile Menu
@@ -33,14 +32,32 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTopBtn.style.display = 'none';
         }
 
-        // Section Reveal on Scroll
+        // Update Active Link Based on Scroll Position
+        let current = '';
         sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const triggerPoint = window.innerHeight / 1.2;
-            if (sectionTop < triggerPoint) {
-                section.classList.add('active');
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 70 && window.pageYOffset < sectionTop + sectionHeight - 70) {
+                current = section.getAttribute('id');
             }
         });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+                const underline = document.querySelector('.navbar ul li a.active::after');
+                if (underline) {
+                    underline.style.width = `${link.offsetWidth}px`;
+                    underline.style.left = `${link.offsetLeft}px`;
+                }
+            }
+        });
+
+        // Ensure Home link is active if at the top of the page
+        if (window.pageYOffset === 0) {
+            document.querySelector('a[href="#home"]').classList.add('active');
+        }
     });
 
     // Smooth Scrolling for Internal Links
@@ -62,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Section Reveal on Load
     sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const triggerPoint = window.innerHeight / 1.2;
-        if (sectionTop < triggerPoint) {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 70 && window.pageYOffset < sectionTop + sectionHeight - 70) {
             section.classList.add('active');
         }
     });
