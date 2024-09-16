@@ -537,11 +537,11 @@ header {
 }
 
 /* ========== Contact Section ========== */
-.contact-section {
+/* .contact-section {
     margin-top: 80px;
     min-height: 500px;
     height: auto;
-}
+} */
 .contact-section .contact-content {
     display: flex;
     flex-direction: column;
