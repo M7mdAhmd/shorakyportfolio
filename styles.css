@@ -537,11 +537,11 @@ header {
 }
 
 /* ========== Contact Section ========== */
-/* .contact-section {
+.contact-section {
     margin-top: 80px;
-    min-height: 500px;
+    min-height: calc(100% - 5%);
     height: auto;
-} */
+}
 .contact-section .contact-content {
     display: flex;
     flex-direction: column;
@@ -613,7 +613,7 @@ header {
 /* ========== Media Queries ========== */
 @media (max-width: 768px) {
     body p{
-        font-size: 13px !important;
+        font-size: 14px !important;
     }
     .navbar ul {
         position: fixed;
@@ -659,6 +659,22 @@ header {
     .about-section .about-content .about-text{
         width: 100%;
     }
+    
+    .education-photo {
+        display: none;
+    }
+
+    .education-section .education-content {
+        display: block;
+        flex-wrap: wrap;
+        gap: 40px;
+        color: var(--accent-color);
+    }
+
+    .education-main {
+        margin-bottom: 20px;
+   
+    }
 
     .projects-section .projects-content {
         gap: 20px;
@@ -671,6 +687,7 @@ header {
     .project-item img {
         max-width: 100%;
     }
+
 }
 
 @media (max-width: 480px) {
