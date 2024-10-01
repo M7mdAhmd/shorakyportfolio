@@ -540,7 +540,7 @@ header {
 .contact-section {
     margin-top: 80px;
     min-height: calc(100% - 5%);
-    height: calc(100vh - 50px);
+    height: calc(100vh - 100px);
 }
 .contact-section .contact-content {
     display: flex;
