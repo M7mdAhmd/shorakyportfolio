@@ -283,6 +283,22 @@ header {
     width: 100%;
 }
 
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff; /* Adjust this color to match your website */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
 /* ========== Education Section ========== */
 .education-section {
     padding-top: 80px;
